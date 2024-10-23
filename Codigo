@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <label for="foto">Editar Foto</label>
+    <input type="file" id="foto" name="foto" accept="image/*"><br>
+    <form action="#" method="post"></form>
+    <fieldset>
+        <legend>Datos identificativos</legend>
+        
+            <table>
+                <tr>
+                    <td>
+                        <label for="tipo_identificacion">* Tipo identificacion del alumno:</label><br>
+                        <select name="tipo_identificacion" id="tipo_identificacion" required autofocus> 
+                            <option selected value="0">Seleccione</option>
+                            <option value="1">Dni</option>
+                            <option value="2">Nif</option>
+                            <option value="3">Nie</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="numero_documentacion">* Dni / Pasaporte:</label><br>
+                        <input type="number" name="numero_documentacion" id="numero_documentacion" required>
+                    </td>
+                    <td>
+                        <label for="fecha_alta">* Fecha alta:</label><br>
+                        <input type="date" name="fecha_alta" id="fecha_alta" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">* Nombre:</label><br>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </td>
+                    <td>
+                        <label for="primer_apellido">* Primer apellido:</label><br>
+                        <input type="text" name="primer_apellido" id="primer_apellido" required>
+                    </td>
+                    <td>
+                        <label for="segundo_apellido">Segundo apellido:</label><br>
+                        <input type="text" name="segundo_apellido" id="segundo_apellido">
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="nacionalidad">* Nacionalidad:</label><br>
+                        <input list="nacionalidades" name="Nacionalidad" id="nacionalidad" placeholder="española" required>
+                        <datalist name="nacionalidades" id="nacionalidades">
+                            <option selected value="0">Seleccione</option>
+                            <option value="Española">Española</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Brasileña">Brasileña</option>
+                            <option value="Colombiana">Colombiana</option>
+                            <option value="Peruana">Peruana</option>
+                            <option value="Uruguaya">Uruguaya</option>
+                            <option value="Venezolana">Venezolana</option>
+                            <option value="Otro">Otro</option>
+                        </datalist>
+                    </td>
+                    <td>
+                        <label for="numero_seguridad_social">Numero de la Seguridad Social:</label><br>
+                        <input type="number" name="numero_seguridad_social" id="numero_seguridad_social">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="telefono">Telefono personal del Alumno:</label><br>
+                        <input type="tel" name="telefono" id="telefono" pattern="[0-9]{9}">
+                    </td>
+                    <td>
+                        <label for="email">Correo electrónico personal del Alumno:</label><br>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+            </table>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Datos de nacimiento</legend>
+        <table>
+            <tr>
+                <td>
+                  <label for="fecha_nacimiento">* Fecha nacimiento:</label><br>
+                  <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+                </td>
+                <td>
+                    <label for="edad">Edad:</label><br>
+                    <input type="number" name="edad" id="edad">
+                </td>
+                <td>
+                    <label for="sexo">* Sexo:</label><br>
+                    <input type="radio" name="sexo" id="sexo_masculino" value="Masculino" required>
+                    <label for="sexo_masculino">Hombre</label>
+                    <input type="radio" name="sexo" id="sexo_femenino" value="Femenino" checked>
+                    <label for="sexo_femenino">Mujer</label>
+                </td>
+                <td>
+                    <br>
+                    <label for="emancipado">¿Alumno Emancipado?:</label>
+                    <input type="checkbox" name="emancipado" id="emancipado" value="emancipado" checked>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pais">* País:</label><br>
+                    <input list="paises" name="pais" id="pais" placeholder="España" required>
+                    <datalist name="paises" id="paises">
+                        <option value="España">España</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Otro">Otro</option>
+                    </datalist>
+                </td>
+                <td>
+                    <label for="provincia">* Provincia:</label><br>
+                    <input list="provincias" name="provincia" id="provincia" placeholder="Sevilla" required>
+                    <datalist name="provincias" id="provincias">
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Málaga">Málaga</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Cádiz">Cádiz</option>
+                        <option value="Jaén">Jaén</option>
+                        <option value="Huelva">Huelva</option>
+                        <option value="Almería">Almería</option>
+                        <option value="Granada">Granada</option>
+                    </datalist>
+                </td>
+                <td>
+                    <label for="municipio">* Municipio:</label><br>
+                    <input list="municipios" name="municipio" id="municipio" placeholder="Sevilla" required>
+                    <datalist name="municipios" id="municipios">
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Camas">Camas</option>
+                        <option value="Brenes">Brenes</option>
+                        <option value="Dos Hermanas">Dos Hermanas</option>
+                        <option value="Mairena">Mairena</option>
+                        <option value="Tomares">Tomares</option>
+                        <option value="San Jose de la Rinconada">San Jose de la Rinconada</option>
+                        <option value="San Juan">San Juan</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tipo_via">* Tipo de Vía:</label><br>
+                    <input list="tipos_vias" name="tipo_via" id="tipo_via" placeholder="Calle" required>
+                    <datalist name="tipos_vias" id="tipos_vias">
+                        <option value="Calle">Calle</option>
+                        <option value="Plaza">Plaza</option>
+                        <option value="Avenida">Avenida</option>
+                        <option value="Nucleo Residencial">Nucleo Residencial</option>
+                        <option value="Otro">Otro</option>
+                    </datalist>
+                </td>
+                <td>
+                    <label for="direccion">* Dirección:</label><br>
+                    <input type="text" name="direccion" id="direccion" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="numero">* Número:</label><br>
+                    <input type="number" name="numero" id="numero" required>
+                </td>
+                <td>
+                    <label for="escalera">Escalera:</label><br>
+                    <input type="text" name="escalera" id="escalera" placeholder="Esc">
+                </td>
+                <td>
+                    <label for="piso">Piso:</label><br>
+                    <input type="text" name="piso" id="piso" placeholder="Piso">
+                </td>
+                <td>
+                    <label for="puerta">Puerta:</label><br>
+                    <input type="text" name="puerta" id="puerta">
+                </td>
+            
+                <td>
+                    <label for="codigo_postal">* Código Postal:</label><br>
+                    <input type="number" name="codigo_postal" id="codigo_postal" placeholder="41010" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="observaciones">Observaciones:</label><br>
+                    <textarea name="observaciones" id="observaciones" cols="100" rows="5" placeholder="Observaciones de un alumno"></textarea>
+                </td>
+            </tr>
+        </table>
+        
+    </fieldset>
+    </center>
+</body>
+</html>
